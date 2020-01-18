@@ -1,0 +1,187 @@
+{
+  "flags": [
+    {
+      "genre": "Binary",
+      "name": "Reverse-Engineering Android APK 1",
+      "point": 100,
+      "flag": "SECCON{107749}"
+    },
+    {
+      "genre": "Binary",
+      "name": "GDB Remote Debugging",
+      "point": 200,
+      "flag": "SECCON{HelloGDBProtocol}"
+    },
+    {
+      "genre": "Binary",
+      "name": "Individual Elebin",
+      "point": 200,
+      "flag": "SECCON{AaABiN1234567890abcdefBDFHJLNPAW3a5d37a38a0d28faAq}"
+    },
+    {
+      "genre": "Binary",
+      "name": "Exec dmesg",
+      "point": 300,
+      "flag": "SECCON{elf32-i386}"
+    },
+    {
+      "genre": "Binary",
+      "name": "Reverse-Engineering Hardware 1",
+      "point": 400,
+      "flag": "SECCON{###FD80UY#!8880UY#!8}"
+    },
+    {
+      "genre": "Binary",
+      "name": "Reverse-Engineering Hardware 2",
+      "point": 500,
+      "flag": "SECCON{7xgxUbQYixmiJAvtniHF}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Unzip the file",
+      "point": 100,
+      "flag": "SECCON{1s_th1s_passw0rd_weak?}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Find the prime numbers",
+      "point": 200,
+      "flag": "SECCON{SECCoooo_oooOooo_ooooooooN}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Decrypt it",
+      "point": 300,
+      "flag": "SECCON{Cry_Pto_Oo_Oo1Oo_oo_Oo_O}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Please give me MD5 collision files",
+      "point": 400,
+      "flag": "SECCON{MD5______________5DM}"
+    },
+    {
+      "genre": "Excercise",
+      "name": "Last Challenge (Thank you for playing)",
+      "point": 50,
+      "flag": "SECCON{SEEYOUNEXTYEAR}"
+    },
+    {
+      "genre": "Excercise",
+      "name": "Start SECCON CTF",
+      "point": 50,
+      "flag": "SECCON{HACKTHEPLANET}"
+    },
+    {
+      "genre": "Exploit",
+      "name": "FSB: TreeWalker",
+      "point": 200,
+      "flag": "SECCON{4rb17R@rYReAd}"
+    },
+    {
+      "genre": "Exploit",
+      "name": "Micro computer exploit code challenge",
+      "point": 300,
+      "flag": "SECCON{UniqueAndNiceArchitecture}"
+    },
+    {
+      "genre": "Exploit",
+      "name": "SYSCALL: Impossible",
+      "point": 500,
+      "flag": "SECCON{1mp0ssible_i5_NothiNg}"
+    },
+    {
+      "genre": "Stegano",
+      "name": "SECCON WARS 2015",
+      "point": 100,
+      "flag": "SECCON{TH3F0RC3AVVAK3N53P7}"
+    },
+    {
+      "genre": "Stegano",
+      "name": "Steganography 1",
+      "point": 100,
+      "flag": "SECCON{OCT 21 2015 0728}"
+    },
+    {
+      "genre": "Stegano",
+      "name": "Steganography 2",
+      "point": 100,
+      "flag": "SECCON{Metadata_modification_is_used_for_information_hiding.}"
+    },
+    {
+      "genre": "Stegano",
+      "name": "Steganography 3",
+      "point": 100,
+      "flag": "SECCON{the_hidden_message_ever}"
+    },
+    {
+      "genre": "Unknown",
+      "name": "4042",
+      "point": 100,
+      "flag": "SECCON{A_GROUP_OF_NINE_BITS_IS_CALLED_NONET}"
+    },
+    {
+      "genre": "Unknown",
+      "name": "Command-Line Quiz",
+      "point": 100,
+      "flag": "SECCON{CaitSith@AQUA}"
+    },
+    {
+      "genre": "Unknown",
+      "name": "QR puzzle (Windows)",
+      "point": 200,
+      "flag": "SECCON{402B00F89DC8}"
+    },
+    {
+      "genre": "Unknown",
+      "name": "QR puzzle (Nonogram)",
+      "point": 300,
+      "flag": "SECCON{YES_WE_REALLY_LOVE_QR_CODE_BECAUSE_OF_ITS_CLEVER_DESIGN}"
+    },
+    {
+      "genre": "Unknown",
+      "name": "QR puzzle (Web)",
+      "point": 400,
+      "flag": "SECCON{U_R_4_6R347_PR06R4MM3R!}"
+    },
+    {
+      "genre": "Unknown",
+      "name": "Reverse-Engineering Android APK 2’",
+      "point": 400,
+      "flag": "SECCON{6FgshufUTpRm}"
+    },
+    {
+      "genre": "Web/Network",
+      "name": "Connect the server",
+      "point": 100,
+      "flag": "SECCON{Sometimes_what_you_see_is_NOT_what_you_get}"
+    },
+    {
+      "genre": "Web/Network",
+      "name": "Entry form",
+      "point": 100,
+      "flag": "SECCON{Glory_will_shine_on_you.}"
+    },
+    {
+      "genre": "Web/Network",
+      "name": "Bonsai XSS Revolutions",
+      "point": 200,
+      "flag": "SECCON{TsuriboriWebBros/2015.12.17620}"
+    },
+    {
+      "genre": "Web/Network",
+      "name": "Fragment2",
+      "point": 200,
+      "flag": "SECCON{H++p2i5sOc0o|}"
+    }
+  ],
+  "name": "SECCON CTF 2015 Quals",
+  "links": {
+    "CTFtime": "https://ctftime.org/event/274",
+    "GitHub": "https://github.com/SECCON/SECCON2015_online_CTF"
+  },
+  "date": {
+    "start": 1449295200000,
+    "end": 1449381600000
+  }
+}

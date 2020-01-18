@@ -1,0 +1,10 @@
+[package]
+name = "mal"
+version = "0.1.0"
+authors = ["moratorium08 <moratorium08@gmail.com>"]
+edition = "2018"
+links = "mal"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]

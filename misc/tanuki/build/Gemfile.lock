@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    PriorityQueue (0.1.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  PriorityQueue (= 0.1.2)
+
+BUNDLED WITH
+   1.17.2

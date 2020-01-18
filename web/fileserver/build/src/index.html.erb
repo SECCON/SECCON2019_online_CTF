@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fileserver</title>
+<link rel="stylesheet" href="https://unpkg.com/bulmaswatch/cerulean/bulmaswatch.min.css">
+<section class="section">
+  <div class="container">
+    <h1 class="title">Index of <%= req.path %></h1>
+    <div class="list is-hoverable">
+      <% files.each do |file| %>
+        <a class="list-item" href="/<%= file %>"><%= file %></a>
+      <% end %>
+    </div>
+    <hr>
+    <span class="is-italic"><%= server.config[:ServerSoftware] %> Server at <%= req.header['host'].first %></span>
+  </div>
+</section>

@@ -1,0 +1,82 @@
+@font-face {
+  font-family: oswald;
+  src: url('oswald.woff2') format('woff2');
+}
+
+@keyframes move {
+  from {
+    animation-timing-function: ease-out;
+    transform: translateX(-100vw);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  80% {
+    animation-timing-function: ease-in;
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: oswald;
+  font-weight: bold;
+  font-size: 25vmin;
+  line-height: 1.2;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line:nth-child(1) {
+  color: black;
+}
+
+.line:nth-child(2) {
+  color: red;
+}
+
+.line:nth-child(3) {
+  color: blue;
+}
+
+.line:nth-child(odd) span {
+  display: inline-block;
+  animation: move 3s infinite both;
+}
+
+.line:nth-child(even) span {
+  display: inline-block;
+  animation: move 3s infinite both reverse;
+}
+
+.line:nth-child(1) span:nth-child(1) { animation-delay: 0.35s; }
+.line:nth-child(1) span:nth-child(2) { animation-delay: 0.30s; }
+.line:nth-child(1) span:nth-child(3) { animation-delay: 0.25s; }
+.line:nth-child(1) span:nth-child(4) { animation-delay: 0.20s; }
+.line:nth-child(1) span:nth-child(5) { animation-delay: 0.15s; }
+.line:nth-child(1) span:nth-child(6) { animation-delay: 0.10s; }
+.line:nth-child(1) span:nth-child(7) { animation-delay: 0.05s; }
+.line:nth-child(1) span:nth-child(8) { animation-delay: 0s; }
+
+.line:nth-child(2) span:nth-child(1) { animation-delay: 0.3s; }
+.line:nth-child(2) span:nth-child(2) { animation-delay: 0.35s; }
+.line:nth-child(2) span:nth-child(3) { animation-delay: 0.40s; }
+.line:nth-child(2) span:nth-child(4) { animation-delay: 0.45s; }
+.line:nth-child(2) span:nth-child(5) { animation-delay: 0.50s; }
+.line:nth-child(2) span:nth-child(6) { animation-delay: 0.55s; }
+.line:nth-child(2) span:nth-child(7) { animation-delay: 0.60s; }
+
+.line:nth-child(3) span:nth-child(1) { animation-delay: 0.65s; }
+.line:nth-child(3) span:nth-child(2) { animation-delay: 0.60s; }
+.line:nth-child(3) span:nth-child(3) { animation-delay: 0.55s; }
+.line:nth-child(3) span:nth-child(4) { animation-delay: 0.50s; }

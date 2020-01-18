@@ -1,0 +1,7 @@
+flask == 1.1.1
+gunicorn == 19.9.0
+gevent == 1.4.0
+PyLog2html == 1.0.4
+pillow == 6.1.0
+qrcode == 6.1
+zbarlight == 2.3

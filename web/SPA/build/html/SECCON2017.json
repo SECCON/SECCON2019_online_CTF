@@ -1,0 +1,181 @@
+{
+  "flags": [
+    {
+      "genre": "Binary",
+      "name": "JPEG file",
+      "point": 100,
+      "flag": "SECCON{jp3g_study}"
+    },
+    {
+      "genre": "Binary",
+      "name": "Remote debugging of a micro computer",
+      "point": 300,
+      "flag": "SECCON{SOPIsStepOrientedProg}"
+    },
+    {
+      "genre": "Binary",
+      "name": "powerful shell",
+      "point": 300,
+      "flag": "SECCON{P0wEr$H311}"
+    },
+    {
+      "genre": "Binary",
+      "name": "z80",
+      "point": 300,
+      "flag": "SECCON{H\\+p?S!g5I}"
+    },
+    {
+      "genre": "Binary",
+      "name": "printf machine",
+      "point": 400,
+      "flag": "SECCON{Tur!n9-C0mpl3t3?}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "SHA-1 is dead",
+      "point": 100,
+      "flag": "SECCON{SHA-1_1995-2017?}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Simon and Speck Block Ciphers",
+      "point": 100,
+      "flag": "SECCON{6Pz0}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Vigenere3d",
+      "point": 100,
+      "flag": "SECCON{Welc0me_to_SECCON_CTF_2017}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Ps and Qs",
+      "point": 200,
+      "flag": "SECCON{1234567890ABCDEF}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "broadcast",
+      "point": 300,
+      "flag": "SECCON{8e62f74287c22108e82e18b69caa115ceb8fceec532fae97971b7b01912fa313}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Very smooth",
+      "point": 300,
+      "flag": "SECCON{One of these primes is very smooth.}"
+    },
+    {
+      "genre": "Crypto/Programming",
+      "name": "Man-in-the-middle",
+      "point": 300,
+      "flag": "SECCON{FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFFFF0000000000000000FFFFFFFCB3312FA7E23EE7E4988E056BE3F82D19181D9C6EFE8141120314088F5013875AC656398D8A2ED19D2A85C8EDD3EC2AEF00000000000000000000000000000000000000000000000000000000}"
+    },
+    {
+      "genre": "Programming",
+      "name": "Run me!",
+      "point": 100,
+      "flag": "SECCON{65076140832331717667772761541872}"
+    },
+    {
+      "genre": "Programming",
+      "name": "putchar music",
+      "point": 100,
+      "flag": "SECCON{STAR_WARS}"
+    },
+    {
+      "genre": "Programming",
+      "name": "Qubic Rube",
+      "point": 300,
+      "flag": "SECCON{Thanks to Denso Wave for inventing the QR code}"
+    },
+    {
+      "genre": "Pwn",
+      "name": "baby stack",
+      "point": 100,
+      "flag": "SECCON{'un54f3'm0dul3_15_fr13ndly_70_4774ck3r5}"
+    },
+    {
+      "genre": "Pwn",
+      "name": "election",
+      "point": 200,
+      "flag": "SECCON{I5_7h15_4_fr4ud_3l3c710n?}"
+    },
+    {
+      "genre": "Pwn",
+      "name": "hash burger",
+      "point": 300,
+      "flag": "SECCON{when_nonpie_heap_entropy_will_increase_as_pie_one}"
+    },
+    {
+      "genre": "Pwn",
+      "name": "Online candy store",
+      "point": 400,
+      "flag": "SECCON{Y0u h4ve 4cquired the \"H0use 0f L0re\" techn0l0gy. by Lazenca.0x0}"
+    },
+    {
+      "genre": "Pwn",
+      "name": "secure keymanager",
+      "point": 400,
+      "flag": "SECCON{C4n_y0u_b347_h34p_45lr?}"
+    },
+    {
+      "genre": "Pwn",
+      "name": "The Interpreter",
+      "point": 500,
+      "flag": "SECCON{just wow. you are true webassembly master. for real.}"
+    },
+    {
+      "genre": "Pwn",
+      "name": "video player",
+      "point": 500,
+      "flag": "SECCON{Mommy_I_am_scared_to_go_on_stage!!}"
+    },
+    {
+      "genre": "Pwn",
+      "name": "vm no fun",
+      "point": 500,
+      "flag": "SECCON{nooooooooo_moreeeeeeeeeeeeee_vm}"
+    },
+    {
+      "genre": "ThankYou",
+      "name": "Thank you for playing",
+      "point": 100,
+      "flag": "SECCON{We have done all the challenges. Enjoy last 12 hours. Thank you!}"
+    },
+    {
+      "genre": "Web",
+      "name": "Log search",
+      "point": 100,
+      "flag": "SECCON{N0SQL_1njection_for_Elasticsearch!}"
+    },
+    {
+      "genre": "Web",
+      "name": "SqlSRF",
+      "point": 400,
+      "flag": "SECCON{SSRFisMyFriend!}"
+    },
+    {
+      "genre": "Web",
+      "name": "Theory of Relativity",
+      "point": 500,
+      "flag": "SECCON{lul_that_was_cheating}"
+    },
+    {
+      "genre": "Web",
+      "name": "automatic_door",
+      "point": 500,
+      "flag": "SECCON{f6c085facd0897b47f5f1d7687030ae7}"
+    }
+  ],
+  "name": "SECCON CTF 2017 Quals",
+  "links": {
+    "CTFtime": "https://ctftime.org/event/512",
+    "GitHub": "https://github.com/SECCON/SECCON2017_online_CTF"
+  },
+  "date": {
+    "start": 1512799200000,
+    "end": 1512885600000
+  }
+}

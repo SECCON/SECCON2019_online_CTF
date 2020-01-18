@@ -1,0 +1,8 @@
+/build/pin-3.11-97998-g7ecce2dac-gcc-linux.tar.gz
+/build/pin-3.11-97998-g7ecce2dac-gcc-linux/
+/build/NaoPinTool/
+
+*.pyc
+*.log
+
+app.log.*

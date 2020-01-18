@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  flask:
+   build: ./flask
+   command: gunicorn app:app -b :8000 --name app -k gevent --worker-connections 1000
+   env_file:
+     - ./flask/flask.env
+
+  nginx:
+    image: nginx
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    ports:
+      - 80:80
+    links:
+      - flask
+

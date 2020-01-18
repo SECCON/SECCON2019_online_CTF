@@ -1,0 +1,163 @@
+{
+  "flags": [
+    {
+      "genre": "Crypto",
+      "name": "Boguscrypt",
+      "point": null,
+      "flag": "SECCON{This flag is encoded by bogus routine}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Electrum Kamuy",
+      "point": null,
+      "flag": "SECCON{2e36c3919822de3223e55efd8425f055}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Smart Gacha Lv.1",
+      "point": null,
+      "flag": "SECCON{CreateRandomInBlockchainIsDifficult}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Smart Gacha Lv.2",
+      "point": null,
+      "flag": "SECCON{EthereumUseHashInManyPlaces}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "mnemonic",
+      "point": null,
+      "flag": "SECCON{cda2cb1742d1b6fc21d05c879c263eec}"
+    },
+    {
+      "genre": "Forensics",
+      "name": "History",
+      "point": null,
+      "flag": "SECCON{F0rensics_usnjrnl2018}"
+    },
+    {
+      "genre": "Forensics",
+      "name": "Unzip",
+      "point": null,
+      "flag": "SECCON{We1c0me_2_SECCONCTF2o18}"
+    },
+    {
+      "genre": "Media",
+      "name": "Needle in a haystack",
+      "point": null,
+      "flag": "SECCON(SOMETIMES-A-SECRET-MESSAGE-BROADCASTS-BOLDLY)"
+    },
+    {
+      "genre": "Pwn",
+      "name": "CLV2",
+      "point": null,
+      "flag": "SECCON{2628146539839fbeb3602f109569ab6b}"
+    },
+    {
+      "genre": "Pwn",
+      "name": "Classic Pwn",
+      "point": null,
+      "flag": "SECCON{w4rm1ng_up_by_7r4d1710n4l_73chn1qu3}"
+    },
+    {
+      "genre": "Pwn",
+      "name": "internet_of_seat",
+      "point": null,
+      "flag": "SECCON{5ea4f1ee2820cf8d6151937236f8f69e}"
+    },
+    {
+      "genre": "Pwn",
+      "name": "kindvm",
+      "point": null,
+      "flag": "SECCON{s7ead1ly_5tep_by_5tep}"
+    },
+    {
+      "genre": "Pwn",
+      "name": "painter",
+      "point": null,
+      "flag": "SECCON{6568e57ce3ae8c8f1e24441d7861bae8}"
+    },
+    {
+      "genre": "Pwn",
+      "name": "Profile",
+      "point": null,
+      "flag": "SECCON{57r1ng_l0c4710n_15_n07_0nly_h34p}"
+    },
+    {
+      "genre": "Pwn",
+      "name": "q-escape",
+      "point": null,
+      "flag": "SECCON{6767ac011b200bde1249d241b1cd5480}"
+    },
+    {
+      "genre": "Pwn",
+      "name": "secret_message",
+      "point": null,
+      "flag": "SECCON{54a27f3a76973d08b8124f3b7e1a7d12}"
+    },
+    {
+      "genre": "Pwn",
+      "name": "SimpleMemo",
+      "point": null,
+      "flag": "SECCON{bl4ck_l157_SECCOMP_h45_l075_0f_l00ph0l35}"
+    },
+    {
+      "genre": "QR",
+      "name": "QRChecker",
+      "point": null,
+      "flag": "SECCON{50d7bc7542b5837a7c5b94cf2446b848}"
+    },
+    {
+      "genre": "Reversing",
+      "name": "Runme",
+      "point": null,
+      "flag": "SECCON{Runn1n6_P47h}"
+    },
+    {
+      "genre": "Reversing",
+      "name": "block",
+      "point": null,
+      "flag": "SECCON{4R3_Y0U_CH34+3R?}"
+    },
+    {
+      "genre": "Reversing",
+      "name": "shooter",
+      "point": null,
+      "flag": "SECCON{1NV4L1D_4DM1N_P4G3_4U+H3NT1C4T10N}"
+    },
+    {
+      "genre": "Reversing",
+      "name": "Special Device File",
+      "point": null,
+      "flag": "SECCON{UseTheSpecialDeviceFile}"
+    },
+    {
+      "genre": "Reversing",
+      "name": "Special Instractions",
+      "point": null,
+      "flag": "SECCON{MakeSpecialInstructions}"
+    },
+    {
+      "genre": "Reversing",
+      "name": "tctkToy",
+      "point": null,
+      "flag": "SECCON{a683618184fc18105b7157a52727d004681844be54fd792add4c90ff15a66e6f}"
+    },
+    {
+      "genre": "Web",
+      "name": "GhostKingdom",
+      "point": null,
+      "flag": "SECCON{CSSinjection+GhostScript/ImageMagickRCE}"
+    }
+  ],
+  "name": "SECCON CTF 2018 Quals",
+  "links": {
+    "CTFtime": "https://ctftime.org/event/683",
+    "GitHub": "https://github.com/SECCON/SECCON2018_online_CTF"
+  },
+  "date": {
+    "start": 1540620000000,
+    "end": 1540706400000
+  }
+}

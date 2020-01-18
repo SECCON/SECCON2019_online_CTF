@@ -1,0 +1,161 @@
+■作業手順メモ
+
+apacheをインストールする
+# apt update
+# apt upgrade
+# apt install apache2
+
+nkfが動作に必要なのでインストールする
+# apt install nkf
+
+ncatはない方がいい
+# apt remove netcat # こんな感じ？使わせたくない
+
+Apacheが稼働している事を確認する
+$ curl localhost && echo success || echo failed
+
+# successと表示されればApacheは起動出来ています。
+# 表示された長いhtmlはデフォルトページのhtmlソースです。
+
+自分のIPアドレスを確認する
+$ ifconfig | grep "inet addr:"
+
+CGI モジュールを有効にします。
+# a2enmod cgid
+# systemctl restart apache2
+# touch /etc/apache2/conf-available/cgi-enabled.conf
+# a2enconf cgi-enabled
+# systemctl restart apache2
+
+/usr/lib/cgi-binが実行環境、index.cgiを配置して、パーミション変更
+# chmod 555 index.cgi
+
+フラグの配置 / 直下に
+# chmod 444 /flag
+
+■forkbomb対策
+
+# vi /usr/sbin/apache2ctl
+ulimit -p 1024 #これを91行目あたりに入れる dashは-p bashは-u forkbomb対策
+参考 https://askubuntu.com/questions/97257/ulimit-u-gives-illegal-option-error-when-running-from-a-script-but-not-when-fro
+
+■apacheのチューニング
+/etc/apache2/mods-available/mime_magic.conf
+
+参考:https://nonsensej.xyz/articles/wp/1363
+
+デフォルト値
+<IfModule mpm_event_module>
+        StartServers                     2
+        MinSpareThreads          25
+        MaxSpareThreads          75
+        ThreadLimit                      64
+        ThreadsPerChild          25
+        MaxRequestWorkers         150
+        MaxConnectionsPerChild   0
+</IfModule>
+
+メモリ次第：こんな感じで変えたい
+<IfModule mpm_event_module>
+        StartServers                     8	#プロセス数の初期値
+        MinSpareThreads          192	#空きスレッド数の最小値(下回ったら増やす)
+        MaxSpareThreads          384	#空きスレッド数の最大値(上回ったら減らす)
+        ThreadLimit                      64	#スレッド数の最大値
+        ThreadsPerChild          64	#プロセスあたりのスレッド数
+        MaxRequestWorkers         512	#同時に処理できる最大数
+        MaxConnectionsPerChild   5000	#プロセスが再起動までに処理するリクエスト数
+</IfModule>
+
+■solver
+solvarフォルダファイル一式をどこかのサーバに置く
+
+フラグ受信用サーバを立ち上げる(受信内容は/tmp/log.txtに吐かれる)
+#./solver_reciver.sh
+#nohup ./solver_reciver.sh& # 立ち上げっぱなしならこっち
+
+問題サーバに任意実行コードのPOSTを送る
+#./solver_sender.sh
+#nohup ./solver_sender.sh& # 立ち上げっぱなしならこっち
+
+
+# en
+
+■Work procedure notes
+
+Install apache
+# apt update
+# apt upgrade
+# apt install apache2
+
+Install nkf because it is required for operation
+# apt install nkf
+
+Better not have netcat
+# apt remove netcat # Like this? We do not want to use
+
+Make sure Apache is running
+$ curl localhost && echo success || echo failed
+
+# If success is displayed, Apache has been started.
+#  The long html displayed is the html source for the default page.
+
+
+Check your IP address
+$ ifconfig | grep "inet addr:"
+
+Enable the CGI module.
+# a2enmod cgid
+# systemctl restart apache2
+# touch /etc/apache2/conf-available/cgi-enabled.conf
+# a2enconf cgi-enabled
+# systemctl restart apache2
+
+/ usr / lib / cgi-bin places the execution environment, index.cgi, and changes permissions
+# chmod 555 index.cgi
+
+Flag placement / directly below
+# chmod 444 /flag
+
+■forkbomb prevention
+
+# vi /usr/sbin/apache2ctl
+ulimit -p 1024 # put this around line 91 dash -p bash -u fot forkbomb prevention
+Reference https://askubuntu.com/questions/97257/ulimit-u-gives-illegal-option-error-when-running-from-a-script-but-not-when-fro
+
+■apache tuning
+/etc/apache2/mods-available/mime_magic.conf
+
+Reference:https://nonsensej.xyz/articles/wp/1363
+
+Default value
+<IfModule mpm_event_module>
+        StartServers                     2
+        MinSpareThreads          25
+        MaxSpareThreads          75
+        ThreadLimit                      64
+        ThreadsPerChild          25
+        MaxRequestWorkers         150
+        MaxConnectionsPerChild   0
+</IfModule>
+
+Up to memory: I want to change like this
+<IfModule mpm_event_module>
+        StartServers                     8	#Initial number of processes
+        MinSpareThreads          192	#Minimum number of free threads (increase below the number)
+        MaxSpareThreads          384	#Maximum number of free threads (If it exceeds, reduce it)
+        ThreadLimit                      64	#maximum number of threads
+        ThreadsPerChild          64	#number of threads per process
+        MaxRequestWorkers         512	#maximum number that can be processed simultaneously
+        MaxConnectionsPerChild   5000	#Number of requests processed by the process before restarting
+</IfModule>
+
+■solver
+Put a set of solvar folder files on some server
+
+Start the server for flag receive (the received content is dumped to /tmp/log.txt)
+#./solver_reciver.sh
+#nohup ./solver_reciver.sh& #  If you keep it up
+
+Send POST of arbitrary execution code to challenge server
+#./solver_sender.sh
+#nohup ./solver_sender.sh& # If you keep it up

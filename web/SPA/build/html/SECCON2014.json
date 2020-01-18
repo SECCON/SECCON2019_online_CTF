@@ -1,0 +1,186 @@
+{
+  "flags": [
+    {
+      "genre": "Binary",
+      "name": "Reverse it",
+      "point": 100,
+      "flag": "SECCON{6in_tex7}"
+    },
+    {
+      "genre": "Binary",
+      "name": "Shuffle",
+      "point": 100,
+      "flag": "SECCON{Welcome to the SECCON 2014 CTF!}"
+    },
+    {
+      "genre": "Binary",
+      "name": "Let’s disassemble",
+      "point": 200,
+      "flag": "SECCON{I love Z80. How about you?}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Easy Cipher",
+      "point": 100,
+      "flag": "SECCON{W31C0M 70 7H3 53CC0N ZOIA}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Decrypt it (Easy)",
+      "point": 200,
+      "flag": "SECCON{Ra_b1_N}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Ms. Fortune? Misfortune. 4096-bit RSA",
+      "point": 400,
+      "flag": "SECCON{g^2-f^2=(g+f)(g-f)~is~still~important~to~factor~BIG~numbers,.025f0ddfdc463a24bf0350c15b175eee}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Decrypt it (Hard)",
+      "point": 300,
+      "flag": "// MISSING"
+    },
+    {
+      "genre": "Exploit",
+      "name": "Advanced RISC Machine",
+      "point": 300,
+      "flag": "SECCON{TeaBreakAtWork}"
+    },
+    {
+      "genre": "Exploit",
+      "name": "Holy shellcode",
+      "point": 400,
+      "flag": "SECCON{2QpaleoLev}"
+    },
+    {
+      "genre": "Exploit",
+      "name": "ROP: Impossible",
+      "point": 500,
+      "flag": "// MISSING"
+    },
+    {
+      "genre": "Exploit",
+      "name": "Japanese super micro-controller",
+      "point": 500,
+      "flag": "SECCON{CakeOfBeanCurd}"
+    },
+    {
+      "genre": "Forensics",
+      "name": "Get the key.txt",
+      "point": 100,
+      "flag": "SECCON{@]NL7n+-s75FrET]vU=7Z}"
+    },
+    {
+      "genre": "Forensics",
+      "name": "Read it",
+      "point": 300,
+      "flag": "SECCON{0ld_Mac_753}"
+    },
+    {
+      "genre": "Forensics",
+      "name": "Confused analyte",
+      "point": 500,
+      "flag": "// MISSING"
+    },
+    {
+      "genre": "Forensics",
+      "name": "UnknownFS",
+      "point": 400,
+      "flag": "// MISSING"
+    },
+    {
+      "genre": "Network",
+      "name": "Get from curious “FTP” server",
+      "point": 300,
+      "flag": "SECCON{S0m3+im3_Pr0t0c0l_t411_4_1i3.}"
+    },
+    {
+      "genre": "Network",
+      "name": "Get the key",
+      "point": 100,
+      "flag": "SECCON{Basic_NW_Challenge_Done!}"
+    },
+    {
+      "genre": "Network",
+      "name": "version2",
+      "point": 200,
+      "flag": "SECCON{spdy4isSoC001}"
+    },
+    {
+      "genre": "Programming",
+      "name": "Choose the number",
+      "point": 100,
+      "flag": "SECCON{Programming is so fun!}"
+    },
+    {
+      "genre": "Programming",
+      "name": "The Golden Gate",
+      "point": 400,
+      "flag": "SECCON{Hlvd0toiXgloBhTM}"
+    },
+    {
+      "genre": "QR",
+      "name": "SECCON Wars: The Flag Awakens",
+      "point": 300,
+      "flag": "SECCON{M4Y 7H3 F0RC3 83 W17H U}"
+    },
+    {
+      "genre": "QR",
+      "name": "QR (Easy)",
+      "point": 200,
+      "flag": "SECCON{PSwIQ9d9GjKTdD8H}"
+    },
+    {
+      "genre": "QR",
+      "name": "BBQR",
+      "point": 400,
+      "flag": "SECCON{iReNun8rpEMPiKoT}"
+    },
+    {
+      "genre": "Start",
+      "name": "Welcome to SECCON",
+      "point": 100,
+      "flag": "SECCON{20141206}"
+    },
+    {
+      "genre": "Web",
+      "name": "Binary Karuta",
+      "point": 400,
+      "flag": "SECCON{EnjOy_KaRUtA}"
+    },
+    {
+      "genre": "Web",
+      "name": "Bleeding “Heartbleed” Test Web",
+      "point": 300,
+      "flag": "SECCON{IknewIt!SQLiteAgain!!!}"
+    },
+    {
+      "genre": "Web",
+      "name": "jspuzzle",
+      "point": 100,
+      "flag": "SECCON{3678cbe0171c8517abeab9d20786a7390ffb602d}"
+    },
+    {
+      "genre": "Web",
+      "name": "REA-JUU WATCH",
+      "point": 200,
+      "flag": "SECCON{REA_JUU_Ji8A_NYAN}"
+    },
+    {
+      "genre": "Web",
+      "name": "XSS Bonsai (aka. Hakoniwa XSS Reloaded)",
+      "point": 500,
+      "flag": "SECCON{1a93W8efc707eeecebc5bba619eb}"
+    }
+  ],
+  "name": "SECCON CTF 2014 Quals",
+  "links": {
+    "CTFtime": "https://ctftime.org/event/183"
+  },
+  "date": {
+    "start": 1417824000000,
+    "end": 1417939200000
+  }
+}

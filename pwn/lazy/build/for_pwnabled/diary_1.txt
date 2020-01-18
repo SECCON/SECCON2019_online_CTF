@@ -1,0 +1,10 @@
+My First Post!
+
+Welcome! This is my first blog and first post!
+I will write about tech, especially Cyber Security!
+
+As first step, I made file transfer service with C.
+This server has login func, public transfer func and private transfer func.
+
+I worked hard today. Very very sleepy...
+See you in next post!

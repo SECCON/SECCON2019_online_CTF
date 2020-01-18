@@ -1,0 +1,18 @@
+{
+  "flags": [
+    {
+      "genre": "Web",
+      "name": "SPA",
+      "point": null,
+      "flag": null
+    }
+  ],
+  "name": "SECCON CTF 2019 Quals",
+  "links": {
+    "CTFtime": "https://ctftime.org/event/799"
+  },
+  "date": {
+    "start": 1571464800000,
+    "end": 1571551200000
+  }
+}

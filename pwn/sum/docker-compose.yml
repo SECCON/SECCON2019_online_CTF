@@ -1,0 +1,14 @@
+version: '2.4'
+
+services:
+    ctf:
+        build:
+            context: ./
+            dockerfile: ./build/Dockerfile
+        restart: always
+        ports:
+            - "10001:10001"
+        expose:
+            - "10001"
+        mem_limit: 100m
+        read_only: true

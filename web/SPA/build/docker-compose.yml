@@ -1,0 +1,28 @@
+version: '3'
+services:
+  app:
+    build: ./nginx
+    depends_on:
+      - publisher
+    ports:
+      - '18364:80'
+    volumes:
+      - ./html:/var/www/html
+    restart: always
+      
+  redis:
+    image: redis:4.0.8
+    restart: always
+
+  worker:
+    build: ./worker
+    depends_on:
+      - redis
+    restart: always
+    env_file: .env
+
+  publisher:
+    build: ./publisher
+    depends_on:
+      - redis
+    restart: always

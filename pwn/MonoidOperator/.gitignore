@@ -1,0 +1,4 @@
+peda-*
+.gdb_history
+build/monoid_operator
+core

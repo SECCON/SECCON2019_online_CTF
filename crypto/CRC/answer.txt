@@ -1,0 +1,95 @@
+##ja
+Crazy Repetition of Codes 解法
+コードを読むと分かる通り、CRCを題材にした問題である。
+CRCを計算する際に構成される巡回符号が環をなすことを知っていれば、アルゴリズム自体はそう難しくないはず。
+
+文字列sをn回繰り返した文字列のCRCを求める。巡回符号はGF(2)上の多項式環で表せるので、
+sの多項式表現をS(x)、sのビット長をLsとすると、対象の文字列の多項式表現W(x)は
+
+    W(x) = S(x) * x^(Ls * n) + S(x) * x^(Ls * (n - 1)) + ... + S(x) * x^Ls + S(x)   ...(1)
+
+と表現できる。求めたいCRCはW(x)の生成多項式G(x)による剰余から求まる。
+
+
+# 解法1 文字列連結を用いる
+
+ここで文字列の連結を考える。文字列Aの多項式表現をA(x)、文字列Bの多項式表現をB(x)、Bの長さをLbとすると、
+AとBの連結文字列の多項式表現AB(x)は
+
+    AB(x) = A(x) * x^Lb + B(x)
+
+となる。x^nの剰余はバイナリ法を用いてO(logn)で求まるので、連結された文字列の剰余はそれぞれの剰余から高速に求まる。
+これを利用してバイナリ法と同様に「2の累乗個sが連結された文字列」を次々に連結していくことでW(x)のCRCが求まる。
+これだけなら文字列の連結を自分で実装せずとも、zlibに実装されているcrc32_combineなどの関数をそのまま用いれば良い (多倍長整数には対応してないが)。
+が、このアルゴリズムはバイナリ法を二重に回すのでO((logn)^2)である。今回はn=10^10000のオーダーなので、これでもなお遅い。
+(よほど高速に実装したらこのアルゴリズムでも時間中に計算が終了するかもしれない。それはそれですごいので正解扱いにしたい)
+
+ここで、上の式のx^Lbに注目する。上のアルゴリズムで右から順に文字列を連結していくと、Lbは連結した「2の累乗個sが連結された文字列」の長さずつ大きくなっていく。
+文字列連結の計算に必要な値はx^Lbの剰余だが、これはバイナリ法のループの中で同時に計算してあげることができる。
+文字列連結の処理の中でx^Lbを計算せず、事前に計算したx^Lbの剰余を用いることで、文字列連結をO(1)で処理できる。
+よってアルゴリズム全体でO(logn)となり、これで十分に間に合う。
+
+
+# 解法2 等比級数の公式を用いる
+
+(1)式はそのまま初項S(x)、公比x^Lsの等比数列の有限級数とみなせる。よって等比数列の級数の公式を用いて
+
+    W(x) = S(x) * (x^(Ls * (n + 1)) - 1) / (x^Ls - 1)
+
+を直接計算することでも求まる。除算は拡張ユークリッドの互除法を用いて逆元を計算すれば求まる。
+累乗の計算にバイナリ法を用いれば計算量は同じくO(logn)である。
+
+
+いずれの解法にせよ、上で計算した剰余からCRCに変換する際の処理には十分注意すること。
+
+作問が終わってからググったらこれが出てきた。直接の回答ではないが大いにヒントになるだろう。
+https://stackoverflow.com/q/23048220
+
+
+##en
+Crazy Repetition of Codes writeup
+
+As you can see from the code, it's a challenge based on CRC.
+The algorithm itself should not be so difficult if you know that the Cyclic code formed when calculating the CRC form a ring.
+Find the CRC of a character string that repeats the character string s n times.
+Since the cyclic code can be represented by a polynomial ring on GF (2),If the polynomial expression of s is S (x) and the bit length of s is Ls, then the polynomial expression W (x) of the target string can be expressed as
+
+    W(x) = S(x) * x^(Ls * n) + S(x) * x^(Ls * (n - 1)) + ... + S(x) * x^Ls + S(x)   ...(1)
+
+You can get the CRC obtained from the remainder of the generator polynomial G (x) of W (x).
+
+
+# Solution1 Use string concatenation
+
+
+Now consider the concatenation of character strings. If the polynomial expression of the character string A is A (x), the polynomial expression of the character string B is B (x), and the length of B is Lb,
+The polynomial representation AB (x) of the concatenated string of A and B is
+
+    AB(x) = A(x) * x^Lb + B(x)
+
+Since the remainder of x ^ n is obtained by O (logn) using the binary method, the remainder of the concatenated character string is obtained at high speed from each remainder.
+Utilizing this, the CRC of W (x) is obtained by successively concatenating "character strings in which powers of 2 s are concatenated" in the same manner as in the binary method.
+If you do not have to implement string concatenation yourself, you can use functions such as crc32_combine implemented in zlib as they are (although it does not support big integers).
+However, this algorithm is O ((logn) ^ 2) because it rotates the binary method twice. This time is n = 10 ^ 10000 order, so it is still slow.
+(If implemented very fast, this algorithm may finish the calculation in CTF time. That's great, so I want to treat it correctly way)
+
+Here, pay attention to x ^ Lb in the above equation. When character strings are connected in order from the right by the above algorithm, Lb increases by the length of the connected “character string in which powers of 2 s are connected”.
+The value needed to calculate string concatenation is the remainder of x ^ Lb, which can be calculated simultaneously in a binary loop.
+By using the remainder of x ^ Lb calculated in advance without calculating x ^ Lb in the processing of character string concatenation, character string concatenation can be processed in O (1).
+Therefore, O (logn) is obtained for the entire algorithm, which is sufficient in time.
+
+
+# Solution2 Use the geometric series formula
+
+Equation (1) can be regarded as a finite series of a geometric progression with the first term S (x) and the common ratio x ^ Ls. Therefore, it can also be obtained by directly calculating using the series formula of the geometric progression.
+
+    W(x) = S(x) * (x^(Ls * (n + 1)) - 1) / (x^Ls - 1)
+
+The division can be obtained by calculating the inverse using the extended Euclidean algorithm.
+If the binary method is used to calculate the power, the amount of calculation is also O (logn).
+
+
+Regardless of the solution, be careful when converting the remainder calculated above to CRC.
+
+It is good reference,Not a direct answer, but a great hint.
+https://stackoverflow.com/q/23048220

@@ -1,0 +1,51 @@
+File Server 解法
+
+明らかにディレクトリトラバーサルだが、発火するには複雑な手順を踏む必要がある。
+以下の挙動を組み合わせる。
+
+* Dir.globはNUL文字をセパレータとして扱う (今年12月にリリースされる Ruby 2.7 で削除予定)
+* is_bad_pathがループの早期breakを行うため`{`や`[`を含むURLを渡した場合`\`を利用することができる
+* `/../`はWEBrickのサニタイザーで弾かれるが、`/.\./`はサニタイザーを通過し、なおかつDir.globのバックスラッシュの仕様で親ディレクトリを参照することができる
+* is_bad_pathのチェックを通過するには`[`をunpairedな状態で渡す必要がある。`tm{p,\[}`などで回避。(`tmp`にマッチする)
+
+最終的なペイロードは以下の通り。
+
+1. フラグファイル名を取得する
+
+    http://fileserver.chal.seccon.jp:9292/hoge%00/tmp/flags/
+
+※ Google Chrome では不正なURLとして扱われるのでコマンドラインかFirefoxでアクセスする。
+
+2. フラグの中身を取得する
+
+    http://fileserver.chal.seccon.jp:9292/.%5C./.%5C./.%5C./.%5C./.%5C./.%5C./tm%7Bp%2C%5C%5B%7D/flags/[フラグファイル名]
+
+なお`/.%5C./.%5C./{a,b,c,d,...}{a,b,c,d,...}{a,b,c,d,...}.txt`のようなURLを用いることで1.をスキップできそうだが、
+今回のフラグファイル名にマッチするためにはどのように組み立ててもWEBrickの MAX_URI_LENGTH (= 2083) を超えてしまう。
+(ほんとかな? まあできたとしても非想定解として認めていいだろう)
+
+# en
+File Server writeup
+
+Obviously a directory traversal, but firing requires complex steps.
+Combine the following behaviors:
+
+* Dir.glob treats NUL characters as separators (to be removed in Ruby 2.7 released this December)
+* Since is_bad_path breaks the loop early, you can use `\` if you pass a URL containing `{` or `[`
+* `/../` is played by WEBrick's sanitizer, but `/.\./` passes through the sanitizer and can refer to the parent directory in the backslash specification of Dir.glob
+* You need to pass `[` unpaired to pass the is_bad_path check. Avoid with `tm {p, \ [}` etc. (matches `tmp`)
+
+The final payload is as follows.
+
+1. Get the flag file name
+
+    http://fileserver.chal.seccon.jp:9292/hoge%00/tmp/flags/
+
+※ Google Chrome treats this as an invalid URL, so access it using the command line or Firefox.
+
+2. Get the contents of the flag
+
+    http://fileserver.chal.seccon.jp:9292/.%5C./.%5C./.%5C./.%5C./.%5C./.%5C./tm%7Bp%2C%5C%5B%7D/flags/[flag file name]
+
+Note that `/.% 5C ./.% 5C ./ {a, b, c, d, ...} {a, b, c, d, ...} {a, b, c, d, .. It seems that you can skip 1. by using a URL like.}. txt`, but it will exceed WEBrick's MAX_URI_LENGTH (= 2083) in any way to match the flag file name this time.
+(That's true? Even if it did, it would be acceptable as an unexpected solution.)

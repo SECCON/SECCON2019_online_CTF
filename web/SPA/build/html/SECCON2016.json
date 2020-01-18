@@ -1,0 +1,175 @@
+{
+  "flags": [
+    {
+      "genre": "Binary",
+      "name": "Anti-Debugging",
+      "point": 100,
+      "flag": "SECCON{check_Ascii85}"
+    },
+    {
+      "genre": "Binary",
+      "name": "Retrospective",
+      "point": 200,
+      "flag": "SECCON{LEGACY_VB_P_CODE}"
+    },
+    {
+      "genre": "Binary",
+      "name": "ropsynth",
+      "point": 400,
+      "flag": "SECCON{d28d3afbf80463568d5f}"
+    },
+    {
+      "genre": "Binary",
+      "name": "Obfuscated AES",
+      "point": 500,
+      "flag": "SECCON{owSkwPeH1CHQdPV9KWrSmz9n}"
+    },
+    {
+      "genre": "Binary",
+      "name": "microcomputer",
+      "point": 500,
+      "flag": "SECCON{ILoveKotatsuAndMikan}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Vigenere",
+      "point": 100,
+      "flag": "SECCON{ABABABCDEDEFGHIJJKLMNOPQRSTTUVWXYYZ}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Backpacker's Capricious Cipher",
+      "point": 200,
+      "flag": "SECCON{kpsk}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "Lost Decryption",
+      "point": 200,
+      "flag": "SECCON{Decryption_Of_Feistel_is_EASY!}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "AlphaComplex1",
+      "point": 300,
+      "flag": "SECCON{3907c554839a6462b920f55274c159eea1949086}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "PNG over Telegraph",
+      "point": 300,
+      "flag": "SECCON{SEMAPHORE_LINE_IS_THE_1ST_TELEGRAPH_SYSTEM_IN_THE_WORLD}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "biscuiti",
+      "point": 300,
+      "flag": "SECCON{049a65dae9b075ebb68dd78d7c8c300f3b532065}"
+    },
+    {
+      "genre": "Crypto",
+      "name": "AlphaComplex2",
+      "point": 500,
+      "flag": "SECCON{640d4a0c21d4756a72250879fed9656241609524_Citizen_Are_you_happy}"
+    },
+    {
+      "genre": "Exploit",
+      "name": "cheer msg",
+      "point": 100,
+      "flag": "SECCON{N40.T_15_ju571c3}"
+    },
+    {
+      "genre": "Exploit",
+      "name": "checker",
+      "point": 300,
+      "flag": "SECCON{y0u_c4n'7_g37_4_5h3ll,H4h4h4}"
+    },
+    {
+      "genre": "Exploit",
+      "name": "jmper",
+      "point": 300,
+      "flag": "SECCON{3nj0y_my_jmp1n9_serv1ce}"
+    },
+    {
+      "genre": "Exploit",
+      "name": "logger",
+      "point": 300,
+      "flag": "SECCON{d0nt_f0g3t_r4c3_c0nd1t10n}"
+    },
+    {
+      "genre": "Exploit",
+      "name": "tinypad",
+      "point": 300,
+      "flag": "SECCON{5m45h1n9_7h3_574ck_f0r_fun_4nd_p40f17_w1th_H0u53_0f_31nh3rj4r}"
+    },
+    {
+      "genre": "Exploit",
+      "name": "Missile",
+      "point": 400,
+      "flag": "SECCON{_Y0ur_ski11s_must_be_used_f0r_pe4ce_}"
+    },
+    {
+      "genre": "Exploit",
+      "name": "shopping",
+      "point": 400,
+      "flag": "SECCON{pl3453_buy_4_l07!!}"
+    },
+    {
+      "genre": "Exploit",
+      "name": "chat",
+      "point": 500,
+      "flag": "SECCON{51mpl3_ch47_l1k3_7w1*73*}"
+    },
+    {
+      "genre": "Exploit",
+      "name": "mboard",
+      "point": 500,
+      "flag": "SECCON{mv335_15_n07_4_p3rf3c7_m171g4710n}"
+    },
+    {
+      "genre": "Forensic",
+      "name": "MemoryAnalysis",
+      "point": 100,
+      "flag": "SECCON{_h3110_w3_h4ve_fun_w4rg4m3_}"
+    },
+    {
+      "genre": "Forensic",
+      "name": "VoIP",
+      "point": 100,
+      "flag": "SECCON{9001IVR}"
+    },
+    {
+      "genre": "Forensic",
+      "name": "randomware",
+      "point": 300,
+      "flag": "SECCON{This is Virtual FAT too}"
+    },
+    {
+      "genre": "Web",
+      "name": "basiq",
+      "point": 100,
+      "flag": "SECCON{Carnival}"
+    },
+    {
+      "genre": "Web",
+      "name": "pppoxy",
+      "point": 200,
+      "flag": "SECCON{D5691FB40B2AF60CA78DA78AC65A71E2}"
+    },
+    {
+      "genre": "Web",
+      "name": "uncomfortableweb",
+      "point": 300,
+      "flag": "SECCON{I want to eventually make a CGC web edition... someday...}"
+    }
+  ],
+  "name": "SECCON CTF 2016 Quals",
+  "links": {
+    "CTFtime": "https://ctftime.org/event/354",
+    "GitHub": "https://github.com/SECCON/SECCON2016_online_CTF"
+  },
+  "date": {
+    "start": 1481349600000,
+    "end": 1481436000000
+  }
+}

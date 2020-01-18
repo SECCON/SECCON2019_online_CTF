@@ -1,0 +1,32 @@
+[
+  {
+    "name": "SECCON 2014",
+    "count": 29,
+    "id": "SECCON2014"
+  },
+  {
+    "name": "SECCON 2015",
+    "count": 29,
+    "id": "SECCON2015"
+  },
+  {
+    "name": "SECCON 2016",
+    "count": 27,
+    "id": "SECCON2016"
+  },
+  {
+    "name": "SECCON 2017",
+    "count": 28,
+    "id": "SECCON2017"
+  },
+  {
+    "name": "SECCON 2018",
+    "count": 25,
+    "id": "SECCON2018"
+  },
+  {
+    "name": "SECCON 2019",
+    "count": 1,
+    "id": "SECCON2019"
+  }
+]

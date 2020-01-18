@@ -1,0 +1,77 @@
+Tanuki 解法
+
+# 解法1
+
+一見解読不能に見える暗号ですが、ヒントの意味をよく考えてみましょう。
+ヒントは「たぬき」。「た」「抜き」⋯⋯そう、「た」の字を抜けばいいのです。
+実は、暗号文を走査して「た」以外の文字を拾うことで平文を得ることができます。
+配布されたテキストファイルに対しても同様に上の操作を行うことでフラグを得ることができます。
+
+なお注意点として、配布されたファイルは展開すると2,906,376,313,410,896,280,535,164バイト (=約2.40ヨタバイト) になります。
+おそらく1つのハードディスクには収まらないので、追加でファイルを保存するためのハードディスクを購入しましょう。
+2019年10月6日現在、最もバイト単価の安いハードディスクはSEAGATEのST4000DM004で、7580円/4TBでした。
+よって、かかる費用は 2,906,376,313,410,896,280,535,164B / (7580円 / 4TiB) = 5,009,117,661,675,580円 (=5009.117兆円) で済みます。
+5000兆円を持っている方はぜひ試してみてください。
+
+# 解法2 (5000兆円を持っていない場合)
+
+5000兆円を持っていない場合でも、ご安心ください。工夫をすることで費用をぐっと抑えることができます。
+
+gzipを何度か展開した後のファイルを調べてみると、データ中に単純な繰り返しパターンが多く現れていることが分かります。
+gzipで用いられているDEFLATE圧縮では、LZ77と呼ばれる符号化手法が用いられています。
+この符号化はこれまでのデータから一致する部分を探し出しコピーしてくるというものですが、コピー元のデータが直前にある場合は、この符号化は実質的にランレングス圧縮とみなすことができます。
+与えられたgzipファイルのLZ77符号はほとんどがこのような直前のデータを繰り返すデータで構成されているため、圧縮元のデータをうまくランレングス表現で持つことで、データを完全に展開することなく効率的に元のデータを復元することができます。
+このようにしてgzipを12回展開し、現れたテキストファイルのランレングス表現から「た」の字を除去することでフラグを得られます。
+
+さらに一歩考え方を進めてみましょう。今回のTanuki暗号ではフラグを表す文字列以外の部分はすべて
+単純な「た」の字の繰り返しであり、その繰り返しの長さに関しては問われません。
+仮に元文字列の繰り返しがより少なかったと仮定した場合、圧縮後のデータ列の繰り返し回数を表現する部分の数値が減るだけで
+データの構造自体には影響を与えないでしょう。
+逆に言えば、展開時に圧縮後のデータ列の繰り返し回数を表現する部分を変更しても、
+元データの「た」の繰り返し回数が変化するだけでそれ以外の部分には影響を与えません。
+即ち、この問題を解くにはデータの展開時にDEFLATEの符号列上から単純にデータの繰り返しを表現する部分を除去するだけで十分です。
+このように実装することで、もはやランレングス表現を持つ必要もなく、
+既存のDEFLATE展開ライブラリの実装を少し改造するだけで簡単にフラグを得ることができます。
+
+ちなみにこのgzipファイルのCRC32チェックサムの計算には別問「CRC」の手法が用いられていますが、本問題の解法には関係ありません。
+
+
+# en
+
+Tanuki writeup
+
+# Solution 1
+
+At first glance, it looks like an unbreakable cipher, but let's consider the meaning of the hint.
+The hint is "Tanuki". "Ta", "pull" ⋯⋯ Yes, you just need to get out of the "ta" character.
+In fact, plaintext can be obtained by scanning ciphertext and picking up characters other than "ta"
+The flag can be obtained by performing the above operation on the distributed text file in the same way.
+
+Please note that the distributed file will be 2,906,376,313,410,896,280,535,164 bytes (= approximately 2.40 Yotabytes) when expanded.
+Probably will not fit on one hard disk, so buy an additional hard disk to store your files.
+
+As of October 6, 2019, the hard disk with the lowest byte unit price was SEAGATE's ST4000DM004, which was 7,580 JPY / 4TB.
+It costs 5,009,117,661,675,580 yen (= 5009.117 trillion yen).
+If you have 5000 trillion yen, please try it. :)
+
+
+
+# Solution 2  (If you do not have 5000 trillion yen)
+
+Don't worry if you don't have 5000 trillion yen. You can save a lot of money by devising it.
+
+If you examine the file after extracting gzip several times, you can see that many simple repeating patterns appear in the data.
+The DEFLATE compression used in gzip uses an encoding method called LZ77.
+This encoding finds a matching part from the previous data and copies it, but if the data to be copied is immediately before, this encoding can be regarded as effectively run-length compression .
+
+Because most of the LZ77 code of a given gzip file is composed of data that repeats such immediately preceding data, by having the original data in run-length representation, the original data can be efficiently restored without completely expanding the data.
+In this way, you can get the flag by decompressing gzip 12 times and removing the "ta" characters from the run-length representation of the text file that appeared.
+
+Let's go one step further. In this Tanuki cipher, all parts other than the character string representing the flag are simple repetitions of the letter "ta", and the length of the repetition does not matter.
+Assuming that the original string has fewer repetitions, the number of parts representing the number of repetitions of the data string after compression will only be reduced and the data structure itself will not be affected.
+Conversely, changing the part that expresses the number of repetitions of the data string after compression during decompression only changes the number of repetitions of "ta" in the original data and does not affect other parts .
+In other words, to solve this challenge, it is enough to simply remove the part that expresses the repetition of the data from the DEFLATE code string when expanding the data.
+By implementing this way, you no longer need to have a run-length representation, and you can easily get the flags with a slight modification of the existing DEFLATE expansion library implementation.
+
+
+By the way, the method of another question "CRC" is used to calculate the CRC32 checksum of this gzip file, but it is not related to the solution of this challenge.
